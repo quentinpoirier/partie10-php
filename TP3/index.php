@@ -25,9 +25,7 @@ $portraitsArray = [
     ]
 ];
 
-var_dump($portraitsArray);
-
-foreach ($portraitsArray as $key => $value) {
+foreach ($portraitsArray as $value) {
     $message = $value['portrait'];
 }
 
@@ -40,15 +38,20 @@ foreach ($portraitsArray as $key => $value) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>TP3 Formulaire</title>
+    <style>
+        .imgSize {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
             <?php foreach ($portraitsArray as $key => $value){ ?>
-                <p class="text-secondary text-center h5 font-weight-bold"><?= $value['name'] . ' ' . $value['firstname'] ?></p>
-                <img src="<?= $value['portrait'] ?>" alt="Photos de gars vaguement connuent">
+                <p class="text-secondary text-center h1 font-weight-bold mt-5"><?= $value['name'] . ' ' . $value['firstname'] ?></p>
+                <img class="imgSize" src="<?= $value['portrait'] ?>" alt="Photos de gars vaguement connuent">
             <?php } ?>
             </div>
         </div>

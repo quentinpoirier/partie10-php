@@ -1,7 +1,5 @@
 <?php
-
 require_once 'controller.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -56,7 +54,7 @@ require_once 'controller.php';
                 <div class="col-sm-8">
                     <div class="h3 text-secondary font-weight-bold">Données du formulaire</div><br>
                     <p class="text-success">Vous avez bien été enregistré !</p><br>
-                    <p class="test-secondary font-weight-bold">Nom : <?= htmlspecialchars($_POST['civility']) ?></p><br>
+                    <p class="test-secondary font-weight-bold">Civilité : <?= htmlspecialchars($_POST['civility']) ?></p><br>
                     <p class="test-secondary font-weight-bold">Nom : <?= htmlspecialchars($_POST['lastname']) ?></p><br>
                     <p class="test-secondary font-weight-bold">Prénom : <?= htmlspecialchars($_POST['firstname']) ?></p><br>
                     <p class="test-secondary font-weight-bold">Age : <?= htmlspecialchars($_POST['age']) ?></p><br>
